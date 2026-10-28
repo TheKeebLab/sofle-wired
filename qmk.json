@@ -1,0 +1,40 @@
+{
+  "userspace_version": "1.1",
+  "build_targets": [
+    [
+      "sofle_choc",
+      "qwerty_us",
+      {
+        "CONVERT_TO": "sparkfun_pm2040"
+      }
+    ],
+    [
+      "sofle_choc",
+      "azerty_fr",
+      {
+        "CONVERT_TO": "sparkfun_pm2040"
+      }
+    ],
+    [
+      "sofle_choc",
+      "qwertz_de",
+      {
+        "CONVERT_TO": "sparkfun_pm2040"
+      }
+    ],
+    [
+      "sofle_choc",
+      "qwerty_it",
+      {
+        "CONVERT_TO": "sparkfun_pm2040"
+      }
+    ],
+    [
+      "sofle_choc",
+      "qwerty_es",
+      {
+        "CONVERT_TO": "sparkfun_pm2040"
+      }
+    ]
+  ]
+}

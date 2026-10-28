@@ -1,0 +1,3 @@
+USER_NAME := thekeeblab
+ENCODER_ENABLE = yes
+ENCODER_MAP_ENABLE = yes
