@@ -45,7 +45,7 @@ This is a QMK userspace built against [vial-qmk](https://github.com/vial-kb/vial
 | Path | What |
 |---|---|
 | `keyboards/sofle_choc/keymaps/<layout>/` | One keymap per layout: `keymap.c`, `config.h`, `rules.mk`, `vial.json` |
-| `users/thekeeblab/` | Shared by every layout: layer switching, the screen brightness key, the screens |
+| `users/thekeeblab/` | Shared by every layout: layer switching, the screen brightness key, the screens, the double-tap reset (`tkl_boot.c` defines `__late_init`, `mcu_reset` and `bootmagic_should_reset`: only the reset button counts, not plugging in), finding the half on USB (`tkl_split.c` defines `is_keyboard_master_impl`: a half that found no computer keeps looking) |
 | `qmk.json` | What GitHub Actions builds |
 
 The release files show TheKeebLab's screens. Firmware built from this source shows the layer number and caps lock

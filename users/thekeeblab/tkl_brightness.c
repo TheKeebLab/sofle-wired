@@ -3,6 +3,7 @@
 #include QMK_KEYBOARD_H
 #include "transactions.h"
 #include "tkl_brightness.h"
+#include "tkl_split.h"
 
 #ifdef OLED_ENABLE
 
@@ -68,6 +69,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 }
 
 void housekeeping_task_user(void) {
+    tkl_split_task();
     if (is_keyboard_master()) {
         if (picked && (!synced || timer_elapsed32(last_sync) >= TKL_SYNC_MS)) {
             synced = transaction_rpc_send(TKL_SYNC_BRIGHTNESS, sizeof(picked), &picked);
